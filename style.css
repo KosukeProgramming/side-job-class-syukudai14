@@ -1,0 +1,226 @@
+@charset "utf-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.5;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #111;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* 以上リセットCSS */
+
+/******************
+* 共通
+******************/
+.common__title-inner {
+    padding: 30px 15px;
+}
+.common__title {
+    font-family: 'Teko' ,sans-serif;
+    font-size: 50px;
+}
+.common__title-down {
+    font-weight: bold;
+}
+.common__title-initials {
+    color: #009754;
+}
+.button__inner {
+    text-align: center;
+    padding: 50px 0;
+}
+.button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid #111;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    color: #fff;
+    background-color: #17ba70;
+}
+.arrow {
+    transform: translateY(1px) translateX(2px);
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    background-color: #009754;
+    transition: all 0.3s ease;
+}
+.button:hover .arrow {
+    transform: translate(7px, 1px);
+    background-color: #fff;
+}
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #009754;
+    border-right: 3px solid #009754;
+    transform: rotate(45deg) translate(-50%,-20%);
+    transition: all 0.3s ease;
+}
+.button:hover .arrow::after {
+    border-top-color: #fff;
+    border-right-color: #fff;
+}
+/******************
+* FAQ
+******************/
+.faq__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.faq__list {
+    padding: 10px 45px 0;
+}
+.faq__item {
+    position: relative;
+    border-bottom: 1px solid #c7c7c7;
+    padding: 15px 0;
+    font-size: 16px;
+}
+.faq__item::before {
+    content: 'Q';
+    font-family: 'Teko' ,sans-serif;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #009754;
+    font-size: 30px;
+}
+.faq__text {
+    font-weight: bold;
+    line-height: 1.5;
+}
+@media screen and (max-width:767px) {
+    .problem {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .problem__sub-title {
+        font-size: 16px;
+    }
+    .problem__title {
+        font-size: 25px;
+    }
+    .problem__list {
+        margin-top: -30px;
+    }
+    .problem__item {
+        width: calc((100% - 40px) / 2);
+        padding-right: 40px;
+        margin-top: 30px;
+        aspect-ratio: 335 / 412;
+    }
+    .problem__item:nth-of-type(2n) {
+        padding-right: 0;
+    }
+}
